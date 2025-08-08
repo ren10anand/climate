@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Climate Watch | Naan Mudhalvan Project</title>
+    <!-- Link to Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Link to your external stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="weather-app">
+        <h1>Climate Watch</h1>
+        <p class="subtitle">Your Real-Time Weather Companion</p>
+
+        <!-- Search bar for city input -->
+        <div class="search-container">
+            <input type="text" id="city-input" placeholder="Enter city name...">
+            <button id="search-btn" aria-label="Search">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                    <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                </svg>
+            </button>
+        </div>
+
+        <!-- Container to display weather information -->
+        <div class="weather-info">
+            <h2 id="city-name"></h2>
+            <img id="weather-icon" src="https://placehold.co/120x120/e2ebf0/cccccc?text=Icon" alt="Weather Icon">
+            <p id="temperature">--<sup>°C</sup></p>
+            <p id="description">-----</p>
+            
+            <div class="details-container">
+                <div class="detail-item">
+                    <div class="icon">💧</div>
+                    <div class="text">
+                        <span class="label">Humidity</span>
+                        <span id="humidity" class="value">--%</span>
+                    </div>
+                </div>
+                <div class="detail-item">
+                    <div class="icon">💨</div>
+                    <div class="text">
+                        <span class="label">Wind Speed</span>
+                        <span id="wind-speed" class="value">-- km/h</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Error message display -->
+        <div class="error-message" id="error-container">
+            <p>City not found. Please check the spelling and try again.</p>
+        </div>
+    </div>
+
+    <!-- Link to your external JavaScript file -->
+    <script src="script.js"></script>
+</body>
+</html>
